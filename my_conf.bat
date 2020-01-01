@@ -1,0 +1,1 @@
+configure.bat -static -nomake examples -opensource -platform win32-msvc2013
