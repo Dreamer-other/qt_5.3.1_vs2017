@@ -166,14 +166,14 @@ namespace WTF {
         typedef T Type;
     };
 
-#if (defined(__GLIBCXX__) && (__GLIBCXX__ >= 20070724) && defined(__GXX_EXPERIMENTAL_CXX0X__)) || (defined(_MSC_VER) && (_MSC_VER >= 1600))
+//#if (defined(__GLIBCXX__) && (__GLIBCXX__ >= 20070724) && defined(__GXX_EXPERIMENTAL_CXX0X__)) || (defined(_MSC_VER) //&& (_MSC_VER >= 1600))
 
     // GCC's libstdc++ 20070724 and later supports C++ TR1 type_traits in the std namespace.
     // VC10 (VS2010) and later support C++ TR1 type_traits in the std::tr1 namespace.
-    template<typename T> struct HasTrivialConstructor : public std::tr1::has_trivial_constructor<T> { };
-    template<typename T> struct HasTrivialDestructor : public std::tr1::has_trivial_destructor<T> { };
+//    template<typename T> struct HasTrivialConstructor : public std::has_trivial_constructor<T> { };
+//    template<typename T> struct HasTrivialDestructor : public std::has_trivial_destructor<T> { };
 
-#else
+//#else
 
     // This compiler doesn't provide type traits, so we provide basic HasTrivialConstructor
     // and HasTrivialDestructor definitions. The definitions here include most built-in
@@ -197,7 +197,7 @@ namespace WTF {
 #else
     template <typename T> struct HasTrivialConstructor : public false_type{ };
     template <typename T> struct HasTrivialDestructor : public false_type{ };
-#endif
+//#endif
 
     template <typename T> struct HasTrivialConstructor<T*> : public true_type{ };
     template <typename T> struct HasTrivialDestructor<T*> : public true_type{ };

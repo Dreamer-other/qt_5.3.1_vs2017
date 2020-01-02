@@ -50,7 +50,7 @@
 #include <cmath>
 
 #ifdef _MSC_VER
-#define snprintf _snprintf
+//#define snprintf _snprintf
 #endif // _MSC_VER
 #else // !__cplusplus
 

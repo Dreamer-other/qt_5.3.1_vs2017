@@ -35,7 +35,7 @@
 
 #if COMPILER(MSVC)
 // FIXME: why a COMPILER check instead of OS? also, these should be HAVE checks
-
+/*
 inline int snprintf(char* buffer, size_t count, const char* format, ...) 
 {
     int result;
@@ -45,7 +45,7 @@ inline int snprintf(char* buffer, size_t count, const char* format, ...)
     va_end(args);
     return result;
 }
-
+*/
 #if COMPILER(MSVC7) || OS(WINCE)
 
 inline int vsnprintf(char* buffer, size_t count, const char* format, va_list args)

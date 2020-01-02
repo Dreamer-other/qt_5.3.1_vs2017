@@ -43,7 +43,7 @@ void SafeRelease(T& resource)
 }
 
 #if defined(_MSC_VER)
-#define snprintf _snprintf
+//#define snprintf _snprintf
 #endif
 
 #define VENDOR_ID_AMD 0x1002
