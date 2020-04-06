@@ -1,1 +1,1 @@
-configure.bat -static -nomake examples -opensource -platform win32-msvc2013
+d:\Temp\_qt\qt-everywhere-opensource-src-5.3.1\configure.bat -prefix d:\Temp\_qt\qt5.3.1bin64 -static -nomake examples -opensource -platform win32-msvc2013
